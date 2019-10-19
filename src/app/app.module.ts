@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { PrimeModule } from './prime.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContainerModule } from './container/container.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     MaterialModule,
     PrimeModule,
-    FormsModule
+    FormsModule,
+
+    ContainerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

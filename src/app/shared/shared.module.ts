@@ -7,6 +7,7 @@ import { MaterialModule } from '../material.module';
 
 import { NotificationService } from './notification/notification.service';
 import { ToastrModule } from 'ngx-toastr';
+import { TextMaskModule } from 'angular2-text-mask';
 
 
 @NgModule({
@@ -18,6 +19,10 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     MaterialModule,
     ToastrModule.forRoot(), 
+    TextMaskModule,
+  ],
+  exports: [
+    TextMaskModule
   ],
   providers: [NotificationService]
 })

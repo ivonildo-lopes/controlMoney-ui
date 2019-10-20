@@ -2,12 +2,16 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AlertConfirmService } from '../../shared/alert-confirm/alert-confirm.service';
 import { NotificationService, MessageType } from '../../shared/notification/notification.service';
 
+import { CPF } from '@mask';
+
 @Component({
   selector: 'app-tela-padrao',
   templateUrl: './tela-padrao.component.html',
   styleUrls: ['./tela-padrao.component.css']
 })
 export class TelaPadraoComponent implements OnInit, OnDestroy {
+
+  maskCPF = CPF;
 
   constructor(private notification: NotificationService) { }
 

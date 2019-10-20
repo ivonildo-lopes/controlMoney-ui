@@ -9,6 +9,7 @@ import { PrimeModule } from './prime.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContainerModule } from './container/container.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContainerModule } from './container/container.module';
     PrimeModule,
     FormsModule,
 
-    ContainerModule
+    ContainerModule,
+    SharedModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

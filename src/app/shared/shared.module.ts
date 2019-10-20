@@ -5,6 +5,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../material.module';
 
+import { NotificationService } from './notification/notification.service';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [],
@@ -14,14 +17,15 @@ import { MaterialModule } from '../material.module';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ToastrModule.forRoot(), 
   ],
-  providers: []
+  providers: [NotificationService]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: []
+      providers: [NotificationService]
     };
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { AlertConfirmService } from 'src/app/shared/alert-confirm/alert-confirm.service';
+import { AlertConfirmService } from '../../shared/alert-confirm/alert-confirm.service';
+import { NotificationService, MessageType } from '../../shared/notification/notification.service';
 
 @Component({
   selector: 'app-tela-padrao',
@@ -8,7 +9,7 @@ import { AlertConfirmService } from 'src/app/shared/alert-confirm/alert-confirm.
 })
 export class TelaPadraoComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor(private notification: NotificationService) { }
 
   ngOnInit() {
     window.dispatchEvent(new Event('resize'));
@@ -18,6 +19,12 @@ export class TelaPadraoComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     document.body.className = '';
   }
+
+
+  // testando toast
+  // teste(){
+  //    this.notification.info('teste','Titulo Mensagem');
+  // }
 
 
   // TESTANDO OS ALERTAS
